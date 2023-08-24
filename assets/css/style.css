@@ -1,0 +1,332 @@
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* Force scrollbar */
+html {
+  overflow-y: scroll;
+}
+
+/* Align radios and text inputs with their label */
+
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+/* Hand cursor on clickable input elements */
+label,
+input[type="button"],
+input[type="submit"],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em {
+  font-style: italic;
+}
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup {
+  top: -0.7em;
+}
+sub {
+  bottom: -0.25em;
+}
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after {
+  clear: both;
+}
+.cf {
+  *zoom: 1;
+}
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1360px;
+  width: 86%;
+  margin: 0 auto;
+}
+
+/*=================================
+  main styling starts here
+=================================*/
+
+/****************************************
+  faq section styling starts here
+****************************************/
+.faq-section {
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.faq-container {
+  padding: 58px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faq-heading {
+  margin-bottom: 36px;
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq {
+  padding: 36px 30px;
+  border: 1px solid #9fa4a8;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+.faq:last-child {
+  margin: 0;
+}
+
+.faq::before,
+.faq::after {
+  position: absolute;
+  color: green;
+  font-family: "FontAwesome";
+  text-indent: 0;
+}
+.faq::after {
+  color: blue;
+}
+
+.faq-text {
+  margin-right: 36px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.faq-ans {
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.faq a {
+  position: absolute;
+  top: 36px;
+  right: 4%;
+  text-indent: -9999px;
+}
+.faq a::after {
+  color: #000;
+  font-family: "FontAwesome";
+  float: right;
+  text-indent: 0;
+}
+.dropdown::after {
+  content: "\f078";
+  font-size: 14px;
+}
+
+.active {
+  background-color: #fff;
+  box-shadow: 0 3px 6px #9fa4a8;
+  overflow: hidden;
+}
+
+.active a {
+  top: 32px;
+}
+
+.active::before,
+.active::after {
+  content: "\f075";
+  left: 8px;
+  font-size: 90px;
+  opacity: 0.1;
+}
+.active::after {
+  top: -8px;
+  left: -30px;
+  transform: rotateY(180deg);
+}
+
+.active .faq-ans {
+  padding-top: 30px;
+  opacity: 1;
+}
+
+.active a::after {
+  color: #93979b;
+}
+.active .dropdown::after {
+  content: "\f057";
+  font-size: 28px;
+}
+/****************************************
+  faq section styling ends here
+****************************************/
+
+/*=================================
+  main styling ends here
+=================================*/
+
+/*media query starts*/
+/*media query for 995px starts here*/
+@media only screen and (max-width: 995px) {
+}
